@@ -1,0 +1,87 @@
+body {
+  padding: 0;
+}
+
+section {
+  /* background-color: rgb(107, 107, 107, 0.5); */
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+/* BOX SIZING */
+
+.boxOriginal {
+  background-color: white;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 20px solid blue;
+}
+
+.boxBorderBox {
+  background-color: orange;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 20px solid blue;
+}
+
+.boxPaddingBox {
+  background-color: orange;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 20px solid blue;
+  box-sizing: padding-box;
+}
+
+/* DISPLAY */
+
+.display-list-item {
+  width: 100px;
+}
+
+.display-list-item-inline {
+  width: 100px;
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.grey {
+  background-color: grey;
+}
+
+/* MARGIN */
+
+.margin-50 {
+  margin: 50px;
+}
+.margin-100 {
+  margin: 50px;
+}
+
+/* PADDING */
+
+.padding-50 {
+  padding: 50px;
+}
+.padding-100 {
+  padding: 50px;
+}
+
+/* OUTLINE BORDER */
+
+.outlineBorder {
+  /* largura | estilo | cor */
+  outline: 16px solid pink;
+}
+.onlyBorder {
+  /* largura | estilo | cor */
+  border: 16px solid blue;
+}
