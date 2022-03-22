@@ -16,6 +16,7 @@ section {
   padding: 10px;
   margin: 10px;
   border: 20px solid blue;
+  box-sizing: content-box;
 }
 
 .boxBorderBox {
@@ -40,10 +41,18 @@ section {
 
 .display-list-item {
   width: 100px;
+  display: block;
 }
 
 .display-list-item-inline {
-  width: 100px;
+  width: 200px;
+  height: 300px;
+  display: inline;
+}
+
+.display-list-item-inline-block {
+  width: 200px;
+  height: 300px;
   display: inline-block;
 }
 
@@ -63,7 +72,7 @@ section {
   margin: 50px;
 }
 .margin-100 {
-  margin: 50px;
+  margin: 100px;
 }
 
 /* PADDING */
@@ -72,7 +81,7 @@ section {
   padding: 50px;
 }
 .padding-100 {
-  padding: 50px;
+  padding: 100px;
 }
 
 /* OUTLINE BORDER */
@@ -80,8 +89,17 @@ section {
 .outlineBorder {
   /* largura | estilo | cor */
   outline: 16px solid pink;
+  width: 500px;
+  margin: 32px;
 }
 .onlyBorder {
   /* largura | estilo | cor */
   border: 16px solid blue;
+  width: 500px;
+  margin: 32px;
+}
+.noBorder {
+  width: 500px;
+  margin: 32px;
+  background-color: blueviolet;
 }
