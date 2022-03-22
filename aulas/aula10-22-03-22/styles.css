@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+}
+
+section {
+  /* background-color: rgb(107, 107, 107, 0.5); */
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+/* COLORS */
+
+.backgroundLaranja,
+.backgroundLaranjaHex,
+.backgroundLaranjaRgb {
+  width: 100px;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+}
+
+.backgroundLaranja {
+  background-color: orange;
+}
+.backgroundLaranjaHex {
+  background-color: #ffa500;
+}
+.backgroundLaranjaRgb {
+  background-color: rgb(255, 165, 0);
+}
+
+/* BACKGROUND */
+
+.custom-background {
+  width: 500px;
+  height: 500px;
+  padding: 16px;
+  border: solid 4px black;
+
+  background-color: cornflowerblue;
+  background-image: url(https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-attachment: fixed;
+
+  background: linear-gradient(255, 255, 255, 0);
+}
