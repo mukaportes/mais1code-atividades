@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+}
+
+section {
+  /* background-color: rgb(107, 107, 107, 0.5); */
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+/* VIDEO */
+video {
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: 32px; 
+}
+
+/* AUDIO */
+audio {
+  width: 600px;
+  display: block;
+  margin: 32px; 
+}
+
+/* IFRAME */
+iframe {
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: 32px;
+}
+
+/* IMG & SVG */
+.normal-img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 32px;
+}
+
+.svg-img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 32px;
+  /* fill: aqua; */
+}
+
+.fill-svg {
+  stroke: aqua;
+  fill: red;
+}

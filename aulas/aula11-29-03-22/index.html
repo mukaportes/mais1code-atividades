@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mais1Code</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+
+<body>
+  <section class="wrapper">
+    <h1>VIDEO</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/video">Link MDN</a>
+
+    <h3>VIDEO</h3>
+    <video src="assets/Kazam_screencast_00013.mp4">
+      <!-- <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"> -->
+    </video>
+    <h3>VIDEO COM CONTROLES (BOTOES PLAY, PAUSE, ETC)</h3>
+    <video controls src="assets/Kazam_screencast_00013.mp4">
+      <!-- <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"> -->
+    </video>
+    <h3>VIDEO AUTOPLAY</h3>
+    <video autostart="true" autoplay="true" muted="false" src="assets/Kazam_screencast_00013.mp4">
+      <!-- <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"> -->
+    </video>
+  </section>
+  <section class="wrapper">
+    <h1>AUDIO</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/audio">Link MDN</a>
+
+    <h3>AUDIO</h3>
+    <audio src="assets/Life Aquatic - Single Digit Millionaire.mp3"></audio>
+    <h3>AUDIO COM CONTROLES</h3>
+    <audio controls src="assets/Life Aquatic - Single Digit Millionaire.mp3"></audio>
+    <h3>AUDIO COM AUTOPLAY</h3>
+    <audio autostart="true" autoplay="true" muted="false"
+      src="assets/Life Aquatic - Single Digit Millionaire.mp3"></audio>
+  </section>
+  <section class="wrapper">
+    <h1>IFRAME</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe">Link MDN</a>
+
+    <h3>EXEMPLO PAGINA</h3>
+    <iframe src="https://www.globo.com/" width="300" height="300">
+      <h3>Your browser does not support iframes.</h3>
+    </iframe>
+
+    <h3>EXEMPLO EMBED YOUTUBE</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uWgW56qwbzI" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </section>
+  <section class="wrapper">
+    <h1>IMAGEM</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/image">Link MDN</a>
+
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C560BAQHJh3_iePOWbA/company-logo_200_200/0/1634585856591?e=2147483647&v=beta&t=G4oVZvF8T8G494jrG7dR7U3oeVVAyUgxchORGbv05K0"
+      alt="LOGO MAIS1CODE" class="normal-img">
+  </section>
+  <section class="wrapper">
+    <h1>SVG</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/svg">Link MDN</a>
+
+    <h3>SVG IMPORTADA</h3>
+    <img src="assets/img_217857.svg" alt="MEU SVG" class="svg-img">
+
+    <h3>SVG INLINE</h3>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg width="160px" height="160px viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>9809465A-4030-432B-B57B-A6A5739FE4C8</title>
+      <g class="fill-svg" id="Icons" stroke-width="1" fill-rule="evenodd">
+        <g id="Web" transform="translate(-368.000000, -187.000000)">
+          <g id="ico/shop" transform="translate(368.500000, 187.000000)">
+            <rect id="Rectangle" x="0" y="0" width="160" height="160"></rect>
+            <g id="bag" transform="translate(4.500000, 2.000000)" stroke="#8E77EB" stroke-width="2">
+              <rect id="Rectangle" stroke-linecap="square" stroke-linejoin="round" x="0" y="4.25" width="15" height="15"
+                rx="4"></rect>
+              <path
+                d="M4.1875,8 L4.1875,3.07480983 C4.1875,1.37663925 5.75450338,0 7.6875,0 C9.62049662,0 11.1875,1.37663925 11.1875,3.07480983 L11.1875,8"
+                id="Path" stroke-linecap="round"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </section>
+</body>
+
+</html>
