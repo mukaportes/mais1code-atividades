@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+}
+
+section {
+  /* background-color: rgb(107, 107, 107, 0.5); */
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+/* POSITION */
+.position-div-1, .position-div-2, .position-div-3, .position-div-4 {
+  width: 100px;
+  height: 100px;
+  /* height: 300px; */
+  margin: 16px;
+  color: white;
+}
+
+.position-div-1 {
+  background-color: blue;
+  position: static;
+  left: 0px;
+}
+.position-div-2 {
+  background-color: blue;
+  position: relative;
+  left: 50px;
+}
+.position-div-3 {
+  background-color: green;
+  position: absolute;
+  left: 50px;
+}
+.position-div-4 {
+  background-color: red;
+  position: fixed;
+  left: 100px;
+}
+.position-div-5 {
+  background-color: brown;
+  position: sticky;
+  left: 100px;
+}
+
+/* Z-INDEX */
+.z-index-wrapper {
+  top: 300px;
+}
+
+.primeiro {
+  position: absolute;
+  background-color: aqua;
+  z-index: 4;
+}
+.segundo {
+  position: absolute;
+  background-color: green;
+  z-index: 3;
+}
+
+/* FLEX */
+.div-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.div-flex-row > * {
+  background-color: lightsalmon;
+  width: 100px;
+  margin: 8px;
+}
+
+.div-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.div-flex-col > * {
+  background-color: lightgreen;
+  width: 100%;
+  margin: 8px;
+}
+
+.space-between {
+  height: 500px;
+  background-color: azure;
+  justify-content: space-between;
+  /* align-items: center; */
+  align-items: center;
+}
+
+/* GRID */
+.grid-div {
+  display: grid;
+  grid-template-columns: repeat(3, 10%);
+  grid-column: span 3;
+}
+
+.grid-item-1, .grid-item-2, .grid-item-3 {
+  width: 100px;
+  height: 100px;
+}
+
+.grid-item-1 {
+  background-color: red;
+}
+.grid-item-2 {
+  background-color: green;
+}
+.grid-item-3 {
+  background-color: blue;
+}

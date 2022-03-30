@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mais1Code</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+
+<body>
+  <section class="wrapper">
+    <h1>POSITION</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position">Link MDN</a>
+
+    <!-- SEGUE O FLUXO DA PAGINA // PADRAO QUANDO NAO MUDA O POSITION -->
+    <div class="position-div-1">POSITION STATIC</div>
+    <!-- RELATIVO TENDO COMO REFERENCIA A POSICAO INICIAL DO ELEMENTO -->
+    <div class="position-div-2">POSITION RELATIVE</div>
+    <!-- QUANDO ELEMENTO PAI TEM POSITION DIFERENTE DE STATIC ==> REFERENCIA É O ELEMENTO PAI -->
+    <!-- QUANDO ELEMENTO PAI TEM POSITION STATIC OU NAO TEM PAI ==> REFERENCIA É O PROPRIO DOCUMENTO HTML/PAGINA -->
+    <div class="position-div-3">POSITION ABSOLUTE</div>
+    <!-- FIXO EM RELAÇAO A PAGINA -->
+    <div class="position-div-4">POSITION FIXED</div>
+    <!-- FIXO EM RELAÇAO A ROLAGEM DA PAGINA -->
+    <div class="position-div-5">POSITION STICKY</div>
+  </section>
+  <section class="wrapper z-index-wrapper">
+    <h1>Z-INDEX</h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">Link MDN</a>
+
+    <div class="primeiro">PRIMEIRO</div>
+    <div class="segundo">SEGUNDO</div>
+  </section>
+  <section class="wrapper">
+    <h1>FLEX</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex">Link MDN</a>
+
+    <h3>FLEX ROW</h3>
+    <div class="div-flex-row">
+      <div>ITEM 1</div>
+      <div>ITEM 2</div>
+      <div>ITEM 3</div>
+    </div>
+    <h3>FLEX COLUMN</h3>
+    <div class="div-flex-col">
+      <div>ITEM 1</div>
+      <div>ITEM 2</div>
+      <div>ITEM 3</div>
+    </div>
+    <h3>FLEX ROW</h3>
+    <div class="div-flex-row space-between">
+      <div>ITEM 1</div>
+      <div>ITEM 2</div>
+      <div>ITEM 3</div>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <h1>GRID</h1>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/grid">Link MDN</a>
+
+    <div class="grid-div">
+      <div class="grid-item-1">ITEM 1</div>
+      <div class="grid-item-2">ITEM 2</div>
+      <div class="grid-item-3">ITEM 3</div>
+      <!-- <div class="grid-item-1" style="width: 300px;">ITEM 1</div> -->
+      <div class="grid-item-1">ITEM 1</div>
+      <div class="grid-item-2">ITEM 2</div>
+      <div class="grid-item-3">ITEM 3</div>
+    </div>
+  </section>
+</body>
+
+</html>
