@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+}
+
+section {
+  /* background-color: rgb(107, 107, 107, 0.5); */
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+form > * {
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+form > label, form > fieldset > legend {
+  font-weight: 700;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
