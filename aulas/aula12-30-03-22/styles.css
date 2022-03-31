@@ -20,10 +20,11 @@ section {
 .position-div-1 {
   background-color: blue;
   position: static;
-  left: 0px;
+  left: 50px;
 }
 .position-div-2 {
-  background-color: blue;
+  background-color: yellow;
+  color: black;
   position: relative;
   left: 50px;
 }
@@ -51,12 +52,12 @@ section {
 .primeiro {
   position: absolute;
   background-color: aqua;
-  z-index: 4;
+  z-index: 9999;
 }
 .segundo {
   position: absolute;
   background-color: green;
-  z-index: 3;
+  z-index: -9999;
 }
 
 /* FLEX */
@@ -66,7 +67,7 @@ section {
 }
 .div-flex-row > * {
   background-color: lightsalmon;
-  width: 100px;
+  width: 500px;
   margin: 8px;
 }
 
@@ -83,9 +84,12 @@ section {
 .space-between {
   height: 500px;
   background-color: azure;
-  justify-content: space-between;
-  /* align-items: center; */
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.space-between > * {
+  width: 400px;
+  height: 50px;
 }
 
 /* GRID */
@@ -108,4 +112,8 @@ section {
 }
 .grid-item-3 {
   background-color: blue;
+}
+
+.background-yellow {
+  background-color: yellow;
 }

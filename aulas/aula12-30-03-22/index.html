@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mais1Code</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 </head>
 
@@ -21,9 +23,9 @@
     <!-- QUANDO ELEMENTO PAI TEM POSITION DIFERENTE DE STATIC ==> REFERENCIA É O ELEMENTO PAI -->
     <!-- QUANDO ELEMENTO PAI TEM POSITION STATIC OU NAO TEM PAI ==> REFERENCIA É O PROPRIO DOCUMENTO HTML/PAGINA -->
     <div class="position-div-3">POSITION ABSOLUTE</div>
-    <!-- FIXO EM RELAÇAO A PAGINA -->
-    <div class="position-div-4">POSITION FIXED</div>
     <!-- FIXO EM RELAÇAO A ROLAGEM DA PAGINA -->
+    <!-- <div class="position-div-4">POSITION FIXED</div> -->
+    <!-- FIXO EM RELAÇAO PAGINA -->
     <div class="position-div-5">POSITION STICKY</div>
   </section>
   <section class="wrapper z-index-wrapper">
@@ -49,7 +51,7 @@
       <div>ITEM 2</div>
       <div>ITEM 3</div>
     </div>
-    <h3>FLEX ROW</h3>
+    <h3>FLEX ROW JUSTIFY</h3>
     <div class="div-flex-row space-between">
       <div>ITEM 1</div>
       <div>ITEM 2</div>
@@ -71,6 +73,19 @@
       <div class="grid-item-3">ITEM 3</div>
     </div>
   </section>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM1</div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM2</div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM4</div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM2</div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM5</div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-1 background-yellow">ITEM6</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
