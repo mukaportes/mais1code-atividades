@@ -17,17 +17,21 @@
     <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/form">Link MDN</a>
 
 
-    <form>
+    <form name="meuFormulario" id="meuFormulario" method="POST" action="">
       <label for="entradaTexto">Entrada --> texto</label>
       <input type="text" name="entradaTexto" id="entradaTexto" required />
 
       <label for="entradaTextoGrande">Entrada --> texto grande</label>
-      <input type="textarea" cols="">
+      <input type="textarea">
+
+      <label for="entradaSenha">Entrada --> senha</label>
+      <input type="password" id="entradaSenha">
 
       <label for="entradaEmail">Entrada --> email</label>
       <input type="email" name="entradaEmail" id="entradaEmail" required />
 
       <label for="entradaUrl">Entrada --> url</label>
+      <!-- REGEX VALIDAR URL -->
       <input type="url" name="entradaUrl" id="entradaUrl" pattern=".*\.com\.br\/.*" required />
 
       <label for="entradaFile">Entrada --> arquivo</label>
@@ -44,9 +48,6 @@
         <input type="checkbox" name="entradaCheckbox" id="entradaCheckbox2" value="valor2" checked />
       </fieldset>
 
-      <label for="entradaHidden">Entrada --> escondido</label>
-      <input type="text" name="entradaHidden" id="entradaHidden" required />
-
       <fieldset>
         <legend>RADIO</legend>
         <label for="entradaRadio1">Entrada --> radio 1</label>
@@ -55,21 +56,25 @@
         <input type="radio" name="entradaRadio" id="entradaCheckbox2" required />
       </fieldset>
 
+
+      <label for="entradaHidden">Entrada --> escondido</label>
+      <input type="text" name="entradaHidden" hidden id="entradaHidden" required />
+
       <label for="entradaSelect">Entrada --> select</label>
-      <select type="color" name="entradaSelect" id="entradaSelect">
+      <select name="entradaSelect" id="entradaSelect">
         <option value="valor1">Titulo 1</option>
         <option value="valor2" disabled>Titulo 2</option>
         <option value="valor3">Titulo 3</option>
       </select>
 
       <label for="entradaSelectOptGroup">Entrada --> select optgroup</label>
-      <select type="color" name="entradaSelectOptGroup" id="entradaSelectOptGroup">
+      <select name="entradaSelectOptGroup" id="entradaSelectOptGroup">
         <optgroup label="Grupo 1">
           <option value="valor1">Titulo 1</option>
           <option value="valor2" selected>Titulo 2</option>
           <option value="valor3">Titulo 3</option>
         </optgroup>
-        <optgroup>
+        <optgroup label="Grupo 2">
           <option value="valor4">Titulo 4</option>
           <option value="valor5" selected>Titulo 5</option>
           <option value="valor6">Titulo 6</option>
@@ -96,7 +101,7 @@
       <label for="entradaDate">Entrada --> data</label>
       <input type="date" name="entradaDate" id="entradaDate" required />
       <label for="entradaDateHour">Entrada --> data e hora</label>
-      <input type="datetime" name="entradaDateHour" id="entradaDateHour" required />
+      <input type="datetime-local" name="entradaDateHour" id="entradaDateHour" required />
       <label for="entradaWeek">Entrada --> semana</label>
       <input type="week" name="entradaWeek" id="entradaWeek" required />
 
@@ -107,7 +112,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  
+   
 </body>
 
 </html>
