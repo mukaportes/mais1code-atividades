@@ -103,6 +103,18 @@ body {
   padding-left: 36px;
 }
 
+.relative {
+  position: relative;
+}
+.eye-btn {
+  background: url("./assets/eye.svg") no-repeat right;
+  width: 20px;
+  position: absolute;
+  right: 5%;
+  top: 60%;
+  height: 20px;
+}
+
 .form-group-checkbox {
   display: flex;
   flex-direction: row;
@@ -147,13 +159,13 @@ body {
 
 .login-btn {
   background-color: var(--primary-color);
-  padding: 8px 32px;
+  padding: 14px 32px;
   text-align: center;
   color: black;
   width: 100%;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   margin-top: 32px;
 }
