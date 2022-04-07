@@ -1,0 +1,1 @@
+console.log('Olá de dentro do arquivo JS');
