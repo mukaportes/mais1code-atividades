@@ -1,21 +1,23 @@
 const meuNumero = 10;
 console.log('meuNumero', meuNumero);
 
-const minhaString = 'palavra';
+const minhaString = `palavra${meuNumero}`;
 console.log('minhaString', minhaString);
 
 const meuBooleano = true;
 console.log('meuBooleano', meuBooleano);
 
+let minhaVar;
+console.log('minhaVar', minhaVar);
 const indefinido = undefined;
 console.log('indefinido', indefinido);
-console.log('indefinido existe?', indefinido);
+console.log('indefinido nao existe?', !indefinido);
 
 const nulo = null;
 console.log('nulo', nulo);
-console.log('nulo existe?', nulo);
+console.log('nulo nao existe?', !nulo);
 
-const objeto = { 
+const objeto = {
   chaveString: 'valor',
   chaveNumber: 132,
   chaveBoolean: true,
@@ -56,8 +58,8 @@ console.log('lista -> itemNull', lista[4]);
 console.log('lista -> itemArray', lista[5]);
 console.log('lista -> itemObject', lista[6]);
 console.log('lista -> itemNadaVer', lista[66]);
-
 lista.push('novoItem');
 console.log('lista -> novoItem', lista[7]);
+console.log('lista', lista);
 
 
