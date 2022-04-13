@@ -1,7 +1,13 @@
 // FOR LOOP
 let n = 10;
 for (let i = 0; i < n; i += 1) {
+  if (i === 2 || i === 3) {
+    continue;
+  }
   console.log('Execucao de numero: ', i);
+  if (i === 6) {
+    break;
+  }
 }
 
 const minhaLista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -19,8 +25,8 @@ const meuObjeto = {
 };
 // FOR IN --> usado com OBJETOS
 for (let propName in meuObjeto) {
-  console.log('Propriedade: ', propName);
-  console.log('Valor: ', meuObjeto[propName]);
+  console.log('Propriedade: ', propName); // prop1
+  console.log('Valor: ', meuObjeto[propName]); // val1
 }
 
 // WHILE
@@ -29,7 +35,15 @@ let whileVal = 0;
 
 while (whileVal < 3) {
   whileIteration++;
-  whileVal += whileIteration;
+  if (whileIteration === 1) {
+    continue;
+  }
+
+  if (whileIteration === 2) {
+    break;
+  }
+  // whileVal += whileIteration; 
+  whileVal = whileVal + whileIteration; 
 }
 console.log('While iteration: ', whileIteration);
 console.log('While value: ', whileVal);
