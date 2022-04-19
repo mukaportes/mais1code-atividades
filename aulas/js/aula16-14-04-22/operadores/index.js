@@ -50,10 +50,12 @@ console.log('5 + (10 * 10)', 5 + (10 * 10));
 
 // OPERADORES DE COMPARACAO IGUAL
 const igual = 10 == '10';
+const diferente = 10 != '10';
 console.log("Igual --> 10 == '10'", igual);
 
 // OPERADORES DE COMPARACAO ESTRITAMENTE IGUAL
 const estritamenteIgual = 10 === '10';
+const estritamenteDiferente = 10 !== '10';
 console.log("estritamenteIgual --> 10 === '10'", estritamenteIgual);
 
 // OPERADORES DE COMPARACAO MAIOR, MENOR OU IGUAL A
@@ -67,12 +69,15 @@ let atriNum = 1;
 console.log('atriNum', atriNum);
 
 atriNum += 2;
+// atriNum = atriNum + 2
 console.log('atriNum --- +=', atriNum);
 
 atriNum -= 1;
+// atriNUm = atriNum - 2
 console.log('atriNum --- -=', atriNum);
 
 atriNum *= 2;
+// atriNUm = atriNum * 2
 console.log('atriNum --- *=', atriNum);
 
 atriNum /= 2;
@@ -92,10 +97,15 @@ const mentira = 1 === 2;
 
 console.log('AND false', verdade && mentira);
 console.log('AND true', verdade && verdade);
-console.log('OR false', verdade || mentira);
-console.log('OR true', mentira || mentira);
-console.log('NOT false', verdade);
-console.log('NOT true', !mentira);
+console.log('OR true', verdade || mentira);
+console.log('OR false', mentira || mentira);
+console.log('NOT false', !verdade);
+console.log('NOT true', !(mentira && verdade));
+
+
+
+
+
 
 
 
