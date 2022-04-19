@@ -1,1 +1,9 @@
 https://www.cursoemvideo.com/wp-content/uploads/2019/08/exercicios-algoritmos.pdf
+
+
+PASSO 1 -> 10 ao 16
+PASSO 2 -> 21, 22, 24, 24, 25
+PASSO 3 -> 28, 29, 35, 36
+PASSO 4 -> 48, 50, 53, 54
+PASSO 5 -> 58, 60
+
