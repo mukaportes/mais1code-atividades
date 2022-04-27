@@ -7,3 +7,10 @@ PASSO 3 -> 28, 29, 35, 36
 PASSO 4 -> 48, 50, 53, 54
 PASSO 5 -> 58, 60
 
+
+EXERCICIOS JAVASCRIPT
+
+https://github.com/dinanathsj29/javascript-exercise-beginners#topics-include
+https://github.com/TheOdinProject/javascript-exercises
+
+
