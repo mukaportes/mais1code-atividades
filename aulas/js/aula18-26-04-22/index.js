@@ -14,6 +14,7 @@
  *    telefone: string,
  * } 
  */
+
 const Contato = function(novoContato = {}) {
   this.contato = novoContato;
 
@@ -45,7 +46,7 @@ const Contato = function(novoContato = {}) {
 
   // Considerando que tenhamos duas opções para formatação: uma para exibir o contato 
   // e outra para salvar o contato com nome completo em um só campo 
-  this.getContatoFormatado = (salvar = false) => {
+  this.getContatoFormatado = (salvar) => {
     if (salvar) {
       return {
         nome: `${this.contato.primeiroNome} ${this.contato.sobrenome}`,
@@ -54,7 +55,7 @@ const Contato = function(novoContato = {}) {
       };
     } else {
       return {
-        ...this.contato,
+        ...this.contato, // cola todas as propriedades do this.contato nesse novo objeto
         categoria: this.getCategoriaIdade(),
       };
     }
@@ -72,7 +73,6 @@ const Contato = function(novoContato = {}) {
 };
 
 
-
 // EXEMPLO DE CONSTRUTOR PARA SALVAR/BUSCAR CONTATOS NO BANCO DE DADOS
 // Nosso 'Banco de dados' será um Array no código que irá armazenar novos contatos
 const contatoLista = [];
@@ -82,7 +82,7 @@ const ContatoDB = function(conexaoBancoDeDados) {
 
   this.get = () => {
     // return contatoLista;
-    return [...contatoLista];
+    return [...contatoLista]; // criando uma copia de contatoLista
   };
 
   this.save = (novoContato) => {
@@ -99,6 +99,9 @@ const ContatoDB = function(conexaoBancoDeDados) {
 
     return 'Novo contato criado com sucesso';
   };
+
+  // update() --> atualizar um contato
+  // delete() --> deletar um contato
 };
 
 // Usando os exemplos acima
@@ -110,9 +113,13 @@ const contatoInput = {
   telefone: '11 998443255',
 };
 
-const db = new ContatoDB(contatoInput);
+const db = new ContatoDB();
 console.log('LISTA VAZIA', db.get());
 db.save(contatoInput);
 console.log('LISTA', db.get());
 db.save(contatoInput);
 console.log('LISTA', db.get());
+
+const db2 = new ContatoDB();
+db2.save(contatoInput);
+console.log('LISTA DB2', db.get());
