@@ -13,4 +13,4 @@ EXERCICIOS JAVASCRIPT
 https://github.com/dinanathsj29/javascript-exercise-beginners#topics-include
 https://github.com/TheOdinProject/javascript-exercises
 
-
+https://www.youtube.com/watch?v=0bNeKAzVvlE
