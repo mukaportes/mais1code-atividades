@@ -1,3 +1,14 @@
+// USAR TECLADO PARA APERTAR BOTOES
+
+// busca elementos pelo nome da classe
+console.log("document.getElementsByClassName('col-4')", document.getElementsByClassName('col-4'));
+// busca elementos pelo atributo name
+console.log("document.getElementsByName('operacaoName')", document.getElementsByName('operacaoName'));
+// busca UM elemento usando CSS
+console.log("document.querySelector('div')", document.querySelector('div'));
+// busca VARIOS elemento usando CSS
+console.log("document.querySelectorAll('div')", document.querySelectorAll('p'));
+
 // exibir valor do input na div do Visor
 const exibirValorInput = () => {
   const valorInput = document.getElementById('valorOperacao').value;
@@ -6,7 +17,7 @@ const exibirValorInput = () => {
 
 const alterarValorInput = (novoValor) => {
   if (document.getElementById('valorOperacao').value === '') {
-    document.getElementById('valorOperacao').value = novoValor; 
+    document.getElementById('valorOperacao').value = novoValor;
   } else {
     document.getElementById('valorOperacao').value += novoValor; 
   }
@@ -16,28 +27,26 @@ const limparInput = () => {
   document.getElementById('valorOperacao').value = '';
 };
 
+// valores = '100 - 10'
 const calcular = (valores) => {
-  const operacao = String(valores);
-  const removerEspacos = operacao.split(' ');
-  let sinal;
+  const operacao = String(valores); // operacao = '100 - 10'
+  const removerEspacos = operacao.split(' '); // removerEspacos = ['100', '-', '10']
+  let sinal = 0; // '-';
   let nums1 = '';
   let nums2 = '';
 
-  console.log(removerEspacos);
+  // ['100', '-', '10']
   removerEspacos.forEach((item) => {
     if (Number.isInteger(Number(item))) {
       if (!sinal) {
         nums1 += item;
       } else {
-        nums2 += item
+        nums2 += item;
       }
     } else {
       sinal = item;
     }
   });
-
-  console.log('nums1', nums1);
-  console.log('nums2', nums2);
 
   if (sinal === '+') {
     return Number(nums1) + Number(nums2);
@@ -45,12 +54,11 @@ const calcular = (valores) => {
     return Number(nums1) - Number(nums2);
   } else if (sinal === '/') {
     return Number(nums1) / Number(nums2);
-  } else if (sinal === '*') {
+  } else {
     return Number(nums1) * Number(nums2);
   }
 };
 
-console.log("document.getElementById('resetCalc')", document.getElementById('resetCalc'));
 // ouve o clique de resetar e executa uma ação
 document.getElementById('resetCalc').addEventListener('click', () => {
   limparInput();

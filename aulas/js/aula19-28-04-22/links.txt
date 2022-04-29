@@ -1,0 +1,8 @@
+https://developer.mozilla.org/pt-BR/docs/Web/Events#eventos_padr%C3%A3o
+https://blog.cod3r.com.br/selecionando-elementos-html-no-javascript/
+
+
+- multiplas operaçoes ao mesmo tempo (ex: 2 + 2 + 3)
+- botao reverter/voltar atras
+- calc cientifica
+
