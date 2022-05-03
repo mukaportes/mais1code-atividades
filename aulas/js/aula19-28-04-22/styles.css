@@ -1,5 +1,5 @@
 .main {
-  max-width: 400px !important;
+  max-width: 500px !important;
   margin-top: 24vh;
 }
 
@@ -26,8 +26,6 @@
 }
 
 .enter-div {
-  display: flex;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }

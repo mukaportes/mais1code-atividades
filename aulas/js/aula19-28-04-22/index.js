@@ -1,3 +1,44 @@
+// PT2 -- MELHORIAS
+const esconderElemento = (id) => {
+  document.getElementById(id).style.display = 'none';
+};
+
+const exibirElemento = (id) => {
+  document.getElementById(id).style.display = 'initial';
+};
+
+const exibirCalculadoraCientifica = () => {
+  esconderElemento('cientificaCalc');
+  exibirElemento('comumCalc');
+
+  exibirElemento('aoQuadradoCalc');
+  exibirElemento('aoCuboCalc');
+  exibirElemento('raizCalc');
+  exibirElemento('porcentoCalc');
+  esconderElemento('maisCalc');
+  esconderElemento('menosCalc');
+  esconderElemento('divideCalc');
+  esconderElemento('multiplicaCalc');
+};
+
+const exibirCalculadoraComum = () => {
+  exibirElemento('cientificaCalc');
+  esconderElemento('comumCalc');
+
+  esconderElemento('aoQuadradoCalc');
+  esconderElemento('aoCuboCalc');
+  esconderElemento('raizCalc');
+  esconderElemento('porcentoCalc');
+  exibirElemento('maisCalc');
+  exibirElemento('menosCalc');
+  exibirElemento('divideCalc');
+  exibirElemento('multiplicaCalc');
+};
+
+// EXECUTA FN PQ INICIALMENTE CARREGAMOS A CALC COMUM
+exibirCalculadoraComum();
+
+
 // USAR TECLADO PARA APERTAR BOTOES
 
 // busca elementos pelo nome da classe
@@ -27,36 +68,56 @@ const limparInput = () => {
   document.getElementById('valorOperacao').value = '';
 };
 
+const executarOperacao = (sinal, num1, num2) => {
+  console.log('input', { sinal, num1, num2 });
+  if (sinal === '+') {
+    return num1 + num2;
+  } else if (sinal === '-') {
+    return num1 - num2;
+  } else if (sinal === '/') {
+    return num1 / num2;
+  } else if (sinal === '*') {
+    return num1 * num2;
+  } else if (sinal === '*') {
+    return num1 * num2;
+  } else if (sinal === '^2') {
+    return num1 ** 2;
+  } else if (sinal === '^3') {
+    return num1 * 3;
+  } else if (sinal === '√') {
+    return Math.sqrt(num1);
+  } else if (sinal === '%') {
+    return num1 * (num2/100);
+  }
+};
+
 // valores = '100 - 10'
 const calcular = (valores) => {
   const operacao = String(valores); // operacao = '100 - 10'
   const removerEspacos = operacao.split(' '); // removerEspacos = ['100', '-', '10']
-  let sinal = 0; // '-';
-  let nums1 = '';
-  let nums2 = '';
+  let resultado = 0;
+  let sinal; // '-';
 
   // ['100', '-', '10']
-  removerEspacos.forEach((item) => {
-    if (Number.isInteger(Number(item))) {
-      if (!sinal) {
-        nums1 += item;
-      } else {
-        nums2 += item;
-      }
-    } else {
+  // console.log('removerEspacos', removerEspacos);
+  removerEspacos.forEach((item, index) => {
+    // console.log('INICIO ITEM', { resultado, sinal }); 
+
+    // se nao for um inteiro, altera o valor do sinal e executa a operação
+    // armazenando seu retorno na var resultado
+    if (!Number.isInteger(Number(item))) {
       sinal = item;
+      resultado = executarOperacao(sinal, resultado, Number(removerEspacos[index + 1]));
+    // se nao houver nenhum sinal, significa que é o primeiro item da lista
+    // apenas atribuimos o valor do primeiro inteiro da lista na var resultado
+    } else if (!sinal) {
+      resultado = Number(item);
     }
+
+    // console.log('FINAL ITEM', { resultado, sinal });
   });
 
-  if (sinal === '+') {
-    return Number(nums1) + Number(nums2);
-  } else if (sinal === '-') {
-    return Number(nums1) - Number(nums2);
-  } else if (sinal === '/') {
-    return Number(nums1) / Number(nums2);
-  } else {
-    return Number(nums1) * Number(nums2);
-  }
+  return resultado;
 };
 
 // ouve o clique de resetar e executa uma ação
@@ -83,6 +144,26 @@ document.getElementById('divideCalc').addEventListener('click', () => {
 // ouve o clique de multiplicar e executa uma ação
 document.getElementById('multiplicaCalc').addEventListener('click', () => {
   alterarValorInput(' * ');
+  exibirValorInput();
+});
+// ouve o clique de ao quadrado e executa uma ação
+document.getElementById('aoQuadradoCalc').addEventListener('click', () => {
+  alterarValorInput(' ^2 ');
+  exibirValorInput();
+});
+// ouve o clique de ao cubo e executa uma ação
+document.getElementById('aoCuboCalc').addEventListener('click', () => {
+  alterarValorInput(' ^3 ');
+  exibirValorInput();
+});
+// ouve o clique de raiz quadrada e executa uma ação
+document.getElementById('raizCalc').addEventListener('click', () => {
+  alterarValorInput(' √ ');
+  exibirValorInput();
+});
+// ouve o clique de porcentagem e executa uma ação
+document.getElementById('porcentoCalc').addEventListener('click', () => {
+  alterarValorInput(' % ');
   exibirValorInput();
 });
 

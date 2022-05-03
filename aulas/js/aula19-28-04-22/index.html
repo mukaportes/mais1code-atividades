@@ -24,59 +24,63 @@
       </div>
       <!--BOTOES OPERAÇOES -->
       <div class="row row-operacoes">
-        <div class="col-4">
+        <div class="col-2">
           <div class="botao-calc" id="resetCalc">C</div>
         </div>
         <div class="col-2">
           <div class="botao-calc" id="maisCalc">+</div>
+          <div class="botao-calc" id="aoQuadradoCalc">x²</div>
         </div>
         <div class="col-2">
           <div class="botao-calc" id="menosCalc">-</div>
+          <div class="botao-calc" id="aoCuboCalc">x³</div>
         </div>
         <div class="col-2">
           <div class="botao-calc" id="divideCalc">/</div>
+          <div class="botao-calc" id="raizCalc">√</div>
         </div>
         <div class="col-2">
           <div class="botao-calc" id="multiplicaCalc">*</div>
+          <div class="botao-calc" id="porcentoCalc">%</div>
+        </div>
+        <div class="col-2">
+          <div class="botao-calc" id="cientificaCalc" onclick="exibirCalculadoraCientifica()">Cient.</div>
+          <div class="botao-calc" id="comumCalc" onclick="exibirCalculadoraComum()">Comum</div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-9">
-          <!--BOTOES NUMEROS -->
-          <div class="row row-numeros">
-            <div class="col-4">
-              <div class="botao-calc" id="1Calc">1</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="2Calc">2</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="3Calc">3</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="4Calc">4</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="5Calc">5</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="6Calc">6</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="7Calc">7</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="8Calc">8</div>
-            </div>
-            <div class="col-4">
-              <div class="botao-calc" id="9Calc">9</div>
-            </div>
-            <div class="col-12">
-              <div class="botao-calc" id="0Calc">0</div>
-            </div>
-          </div>
+      <div class="row row-numeros">
+        <!--BOTOES NUMEROS -->
+        <div class="col-4">
+          <div class="botao-calc" id="1Calc">1</div>
         </div>
-        <div class="col-3 enter-div">
+        <div class="col-4">
+          <div class="botao-calc" id="2Calc">2</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="3Calc">3</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="4Calc">4</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="5Calc">5</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="6Calc">6</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="7Calc">7</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="8Calc">8</div>
+        </div>
+        <div class="col-4">
+          <div class="botao-calc" id="9Calc">9</div>
+        </div>
+        <div class="col-6">
+          <div class="botao-calc" id="0Calc">0</div>
+        </div>
+        <div class="col-6 enter-div">
           <div class="botao-calc" id="enterCalc">ENTER</div>
         </div>
       </div>
