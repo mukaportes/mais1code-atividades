@@ -6,3 +6,4 @@ https://blog.cod3r.com.br/selecionando-elementos-html-no-javascript/
 - botao reverter/voltar atras
 - calc cientifica
 
+

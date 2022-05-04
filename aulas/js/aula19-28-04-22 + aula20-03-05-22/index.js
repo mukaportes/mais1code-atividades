@@ -40,6 +40,64 @@ exibirCalculadoraComum();
 
 
 // USAR TECLADO PARA APERTAR BOTOES
+// Referencia: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+window.addEventListener('keydown', function (event) {
+  console.log('event.key', typeof event.key);
+  // se tecla for 0
+  if (event.key === '0') {
+    alterarValorInput('0');
+    exibirValorInput();
+  } else if (event.key === '1') {
+    alterarValorInput('1');
+    exibirValorInput();
+  } else if (event.key === '2') {
+    alterarValorInput('2');
+    exibirValorInput();
+  } else if (event.key === '3') {
+    alterarValorInput('3');
+    exibirValorInput();
+  } else if (event.key === '4') {
+    alterarValorInput('4');
+    exibirValorInput();
+  } else if (event.key === '5') {
+    alterarValorInput('5');
+    exibirValorInput();
+  } else if (event.key === '6') {
+    alterarValorInput('6');
+    exibirValorInput();
+  } else if (event.key === '7') {
+    alterarValorInput('7');
+    exibirValorInput();
+  } else if (event.key === '8') {
+    alterarValorInput('8');
+    exibirValorInput();
+  } else if (event.key === '9') {
+    alterarValorInput('9');
+    exibirValorInput();
+  // operacoes
+  } else if (event.key === '+') {
+    alterarValorInput(' + ');
+    exibirValorInput();
+  } else if (event.key === '-') {
+    alterarValorInput(' - ');
+    exibirValorInput();
+  }  else if (event.key === '/') {
+    alterarValorInput(' / ');
+    exibirValorInput();
+  } else if (event.key === '*') {
+    alterarValorInput(' * ');
+    exibirValorInput();
+  } else if (event.key === 'Enter') {
+    const input = String(document.getElementById('valorOperacao').value);
+    limparInput();
+    const calculo = calcular(input);
+    alterarValorInput(calculo);
+    exibirValorInput();
+  } else if (event.key === 'g') {
+    alterarValorInput(' √ ');
+    exibirValorInput();
+  }
+});
 
 // busca elementos pelo nome da classe
 console.log("document.getElementsByClassName('col-4')", document.getElementsByClassName('col-4'));
@@ -60,7 +118,7 @@ const alterarValorInput = (novoValor) => {
   if (document.getElementById('valorOperacao').value === '') {
     document.getElementById('valorOperacao').value = novoValor;
   } else {
-    document.getElementById('valorOperacao').value += novoValor; 
+    document.getElementById('valorOperacao').value += novoValor;
   }
 };
 
@@ -69,6 +127,9 @@ const limparInput = () => {
 };
 
 const executarOperacao = (sinal, num1, num2) => {
+  // sinal = '*'
+  // num1 = 90
+  // num2 = 2
   console.log('input', { sinal, num1, num2 });
   if (sinal === '+') {
     return num1 + num2;
@@ -78,27 +139,24 @@ const executarOperacao = (sinal, num1, num2) => {
     return num1 / num2;
   } else if (sinal === '*') {
     return num1 * num2;
-  } else if (sinal === '*') {
-    return num1 * num2;
   } else if (sinal === '^2') {
     return num1 ** 2;
   } else if (sinal === '^3') {
-    return num1 * 3;
+    return num1 ** 3;
   } else if (sinal === '√') {
     return Math.sqrt(num1);
   } else if (sinal === '%') {
-    return num1 * (num2/100);
+    return num1 * (num2 / 100);
   }
 };
 
-// valores = '100 - 10'
+// valores = [100, -, 10, *, 2]
 const calcular = (valores) => {
   const operacao = String(valores); // operacao = '100 - 10'
   const removerEspacos = operacao.split(' '); // removerEspacos = ['100', '-', '10']
-  let resultado = 0;
+  let resultado = 0; // 90
   let sinal; // '-';
 
-  // ['100', '-', '10']
   // console.log('removerEspacos', removerEspacos);
   removerEspacos.forEach((item, index) => {
     // console.log('INICIO ITEM', { resultado, sinal }); 
@@ -108,8 +166,8 @@ const calcular = (valores) => {
     if (!Number.isInteger(Number(item))) {
       sinal = item;
       resultado = executarOperacao(sinal, resultado, Number(removerEspacos[index + 1]));
-    // se nao houver nenhum sinal, significa que é o primeiro item da lista
-    // apenas atribuimos o valor do primeiro inteiro da lista na var resultado
+      // se nao houver nenhum sinal, significa que é o primeiro item da lista
+      // apenas atribuimos o valor do primeiro inteiro da lista na var resultado
     } else if (!sinal) {
       resultado = Number(item);
     }
@@ -226,7 +284,3 @@ document.getElementById('enterCalc').addEventListener('click', () => {
   alterarValorInput(calculo);
   exibirValorInput();
 });
-
-
-
-
