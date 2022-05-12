@@ -1,5 +1,6 @@
 const dataFinal = new Date('2022-05-15').getTime();
 
+// https://bearnithi.com/2019/11/10/how-to-calculate-the-time-difference-days-hours-minutes-between-two-dates-in-javascript/
 const calcularDiferenca = (novaData) => {
   let diferenca = (dataFinal - new Date(novaData).getTime()) / 1000;
   const resultado = {
