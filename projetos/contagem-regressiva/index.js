@@ -1,8 +1,12 @@
-const dataFinal = new Date('2022-05-15').getTime();
+const data = new Date('2022-05-15T00:00:00.000-03:00').toLocaleString('BRL', { // ANO-MES-DIA
+  timeZone: 'America/Sao_Paulo',
+});
+const dataFinal = new Date(data).getTime();
+console.log("new Date('2022-05-15')", data);
 
 // https://bearnithi.com/2019/11/10/how-to-calculate-the-time-difference-days-hours-minutes-between-two-dates-in-javascript/
-const calcularDiferenca = (novaData) => {
-  let diferenca = (dataFinal - new Date(novaData).getTime()) / 1000;
+const calcularDiferenca = () => {
+  let diferenca = (dataFinal - new Date().getTime()) / 1000;
   const resultado = {
     dias: 0,
     horas: 0,
@@ -28,12 +32,26 @@ const elementoDias = document.getElementById('contagem-dias');
 const elementoHoras = document.getElementById('contagem-horas');
 const elementoMinutos = document.getElementById('contagem-minutos');
 const elementoSegundos = document.getElementById('contagem-segundos');
-setInterval(() => {
-  const dataAgora = new Date().toISOString();
-  const diferenca = calcularDiferenca(dataAgora);
+
+const atualizarContagem = () => {
+  const diferenca = calcularDiferenca();
 
   elementoDias.innerHTML = diferenca.dias;
   elementoHoras.innerHTML = diferenca.horas;
   elementoMinutos.innerHTML = diferenca.minutos;
   elementoSegundos.innerHTML = diferenca.segundos;
-}, 1000); // 1000ms = 1s
+};
+
+setInterval(
+  atualizarContagem,
+  1000, // 1000ms = 1s
+);
+
+// setTimeout(
+//   atualizarContagem,
+//   5000, // 1000ms = 1s
+// );
+
+// document.querySelectorAll('.sua-classe').forEach((elemento) => {
+//   elemento.style.visibility = 'hidden';
+// });
