@@ -1,8 +1,8 @@
-const data = new Date('2022-05-15T00:00:00.000-03:00').toLocaleString('BRL', { // ANO-MES-DIA
+const data = new Date('2022-05-26T00:00:00.000-03:00').toLocaleString('BRL', { // ANO-MES-DIA
   timeZone: 'America/Sao_Paulo',
 });
 const dataFinal = new Date(data).getTime();
-console.log("new Date('2022-05-15')", data);
+console.log("new Date('2022-05-26')", data);
 
 // https://bearnithi.com/2019/11/10/how-to-calculate-the-time-difference-days-hours-minutes-between-two-dates-in-javascript/
 const calcularDiferenca = () => {

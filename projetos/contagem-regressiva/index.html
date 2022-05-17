@@ -16,23 +16,56 @@
   <!--CONTEUDO -->
   <div class="container">
     <div class="row">
-      <div class="col-3">
-        <p class="contagem-legenda">Dias</p>
-        <p class="contagem-numero" id="contagem-dias"></p>
+      <div class="col-6 text-center">
+        <p class="titulo">Ready to launch in . . .</p>
+        <div class="row">
+          <div class="col-3">
+            <p class="contagem-legenda">Dias</p>
+            <p class="contagem-numero" id="contagem-dias"></p>
+          </div>
+          <div class="col-3">
+            <p class="contagem-legenda">Horas</p>
+            <p class="contagem-numero" id="contagem-horas"></p>
+          </div>
+          <div class="col-3">
+            <p class="contagem-legenda">Minutos</p>
+            <p class="contagem-numero" id="contagem-minutos"></p>
+          </div>
+          <div class="col-3">
+            <p class="contagem-legenda">Segundos</p>
+            <p class="contagem-numero" id="contagem-segundos"></p>
+          </div>
+        </div>
+        <p class="subtitulo">Inscreva-se para saber mais sobre o lançamento</p>
+        <button class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscreva-se</button>
       </div>
-      <div class="col-3">
-        <p class="contagem-legenda">Horas</p>
-        <p class="contagem-numero" id="contagem-horas"></p>
-      </div>
-      <div class="col-3">
-        <p class="contagem-legenda">Minutos</p>
-        <p class="contagem-numero" id="contagem-minutos"></p>
-      </div>
-      <div class="col-3">
-        <p class="contagem-legenda">Segundos</p>
-        <p class="contagem-numero" id="contagem-segundos"></p>
+      <div class="col-6">
+        <img src="./assets/images/foguete.png" class="img-foguete" />
       </div>
     </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <form name="meuFormulario" id="meuFormulario" method="POST" action="http://localhost:3000/usuario">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Inscreva-se</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="entradaEmail">E-mail</label>
+            <input type="email" class="form-control" name="entradaEmail" id="entradaEmail"
+              placeholder="exemplo@email.com" required />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 
   <!--SCRIPTS JS -->
