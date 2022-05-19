@@ -11,8 +11,13 @@ https://nodejs.org/pt-br/docs/
 https://www.remessaonline.com.br/blog/node-js-descubra-tudo-sobre-a-linguagem-e-suas-aplicacoes/
 
 ## Sobre o NPM (gerenciador de pacotes)
+https://www.npmjs.com/
 https://rockcontent.com/br/blog/npm/
 
+
+## Comandos
+
+`npm init` Cria uma aplicação usando NPM (gerenciador de pacotes)
 
 
 

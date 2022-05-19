@@ -1,0 +1,27 @@
+{
+  "name": "minha-aplicacao",
+  "version": "1.0.0",
+  "description": "Minha aplicacao em NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukaportes/mais1code-atividades.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mais1code",
+    "atividade"
+  ],
+  "author": "Time Mais1Code",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mukaportes/mais1code-atividades/issues"
+  },
+  "homepage": "https://github.com/mukaportes/mais1code-atividades#readme",
+  "dependencies": {
+    "moment": "^2.29.3"
+  }
+}
