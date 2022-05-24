@@ -3,7 +3,7 @@
 https://app.rocketseat.com.br/discover/challenges/countdown
 https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
-**Procurar referências [pode roubar]**
+**Procurar referências**
 **Usar Figma como referência do layout -- deixar o mais proximo possivel**
 **Se tá muito fácil, fazer os pontos extras**
 
