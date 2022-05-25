@@ -1,7 +1,7 @@
 const moduloArquivos = require('./modulos/arquivo');
 
 const programa = () => {
-  const argumentosTerminal = process.argv;
+  const argumentosTerminal = process.argv; // pega todos os argumentos do terminal
   console.log('argumentosTerminal', argumentosTerminal);
 
   if (argumentosTerminal[2] === 'criar') {
