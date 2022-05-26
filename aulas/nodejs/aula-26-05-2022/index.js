@@ -25,3 +25,6 @@ const adicionarLinhasCallback = () => {
     });
   });
 };
+
+adicionarLinhasCallback();
+console.log('Após executar adicionarLinhasCallback()');
