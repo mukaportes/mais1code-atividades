@@ -1,4 +1,5 @@
 // https://dev.to/viniciusersouza/explicando-promises-de-uma-forma-didtica-2pjk
+// https://medium.com/trainingcenter/entendendo-promises-de-uma-vez-por-todas-32442ec725c2
 
 const fs = require('fs');
 
