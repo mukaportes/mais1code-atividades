@@ -89,21 +89,3 @@ setTimeout(() => {
 // enviaEmailDeConfirmação();
 //    - validar email
 //    - enviar email
-
-
-// EXECUTANDO DUAS COISAS AO MESMO TEMPO
-const primeiraFuncao = () => {
-  console.log(new Date().getTime());
-};
-const segundaFuncao = () => {
-  console.log(new Date().getTime());
-};
-
-primeiraFuncao();
-segundaFuncao();
-
-Promise.all([
-  funcaoPromise(),
-]).then((resultado) => {
-
-});
