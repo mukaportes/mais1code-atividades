@@ -9,6 +9,5 @@ Pacotes usados:
 - Express: https://www.npmjs.com/package/express
 
 
-
 ## 02-06 - Listar + alterar + deletar usuários
 ## 07-06 - Integração com front-end
