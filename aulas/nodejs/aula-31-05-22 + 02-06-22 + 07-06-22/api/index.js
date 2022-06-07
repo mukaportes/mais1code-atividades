@@ -1,9 +1,13 @@
 // pacote Express https://www.npmjs.com/package/express
 const express = require('express');
+const cors = require('cors');
 const { criarUsuario, listarUsuarios, alterarUsuario, deletarUsuario } = require('./src/controller');
 
 // cria novo app express // cria um novo objeto express ao chamar express()
 const app = express();
+
+// habilita cors
+app.use(cors());
 
 // habilita o body nas chamadas
 // vc passa uma funcao pro use, e ela vai ser executada antes de todas as chamadas na API

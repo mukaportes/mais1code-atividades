@@ -1,0 +1,19 @@
+.form-wrapper {
+  max-width: 25vw;
+  margin-top: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(158, 158, 158, 0.5);
+  border-radius: 8px;
+  padding: 32px 16px;
+}
+
+.table-wrapper {
+  max-width: 80vw;
+  margin-top: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(158, 158, 158, 0.5);
+  border-radius: 8px;
+  padding: 32px 16px;
+}
