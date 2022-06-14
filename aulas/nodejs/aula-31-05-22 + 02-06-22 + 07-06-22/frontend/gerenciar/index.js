@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch
 
-const buscarUsuarios = () => {
+const getUsuarios = () => {
   return fetch('http://localhost:3000/usuario', {
     method: 'GET',
     cache: 'default',
@@ -8,7 +8,7 @@ const buscarUsuarios = () => {
   });
 };
 
-const removerUsuario = (email) => {
+const deleteUsuario = (email) => {
   if (confirm('Deseja realmente remover o usuário?')) {
     return fetch(`http://localhost:3000/usuario/${email}`, {
       method: 'DELETE',
@@ -17,7 +17,7 @@ const removerUsuario = (email) => {
       mode: 'cors',
     })
       .then(() => {
-        return buscarUsuarios()
+        return getUsuarios()
           .then((response) => response.json())
           .then((bodyObjeto) => {
             const usuarios = bodyObjeto.usuarios;
@@ -33,7 +33,7 @@ const removerUsuario = (email) => {
   }
 };
 
-const alterarUsuario = (email, body) => {
+const patchUsuario = (email, body) => {
   return fetch(`http://localhost:3000/usuario/${email}`, {
     method: 'PATCH',
     headers: { 'content-type': 'application/json', },
@@ -46,15 +46,15 @@ const alterarUsuario = (email, body) => {
 const formatarNovaLinha = (usuario) => {
   return `
     <tr>
-      <th scope="row">${usuario.nome}</th>
+      <td scope="row">${usuario.nome}</td>
       <td>${usuario.email}</td>
-      <td><button class="btn btn-primary" onclick="removerUsuario('${usuario.email}')">REMOVER</button></td>
-      <td><button class="btn btn-primary" onclick="alterarUsuario('${usuario.email}')">ALTERAR</button></td>
+      <td><button class="btn btn-primary" onclick="deleteUsuario('${usuario.email}')">REMOVER</button></td>
+      <td><button class="btn btn-primary" onclick="patchUsuario('${usuario.email}')">ALTERAR</button></td>
     </tr>
   `;
 };
 
-buscarUsuarios()
+getUsuarios()
   .then((response) => response.json())
   .then((bodyObjeto) => {
     const usuarios = bodyObjeto.usuarios;
@@ -66,3 +66,19 @@ buscarUsuarios()
       tabelaBody.innerHTML += novaLinha;
     });
   });
+
+// EXEMPLO -> atualizando a cada 1s
+// setInterval(() => {
+//   getUsuarios()
+//     .then((response) => response.json())
+//     .then((bodyObjeto) => {
+//       const usuarios = bodyObjeto.usuarios;
+
+//       const tabelaBody = document.querySelector('#usuariosTabela');
+
+//       usuarios.forEach((usuario) => {
+//         const novaLinha = formatarNovaLinha(usuario);
+//         tabelaBody.innerHTML += novaLinha;
+//       });
+//     });
+// }, 1000)

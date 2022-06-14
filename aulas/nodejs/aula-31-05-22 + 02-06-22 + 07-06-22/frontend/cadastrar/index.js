@@ -14,11 +14,14 @@ document.querySelector('#cadastroUsuario').addEventListener('submit', function (
   evento.preventDefault(); // previne envio nativo do formulario
 
   const formData = new FormData(evento.target);
+  // formData seria:
+  // [["nome", "Murilo Portescheller"], ["email", "mport.dev@gmail"]]
   const formProps = Object.fromEntries(formData);
+  // { "nome": "Murilo Portescheller", "email": "mport.dev@gmail.com" }
 
   postUsuario(formProps)
-    .then(() => alert('Usuário criado com sucesso'))
-    .catch((error) => {
+    .then(() => alert('Usuário criado com sucesso')) // executa algo qdo promise sucesso/resolvida
+    .catch((error) => { // executa algo qdo promise error/rejeitada
       console.error('Erro ao criar usuário', error);
       alert('Falha ao criar usuário');
     });
