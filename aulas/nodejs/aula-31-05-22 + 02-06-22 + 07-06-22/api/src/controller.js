@@ -4,7 +4,11 @@ const caminhoArquivoDb = `${process.cwd()}/src/db.json`;
 
 const criarUsuario = async (req, res) => {
   try {
-    const novoUsuario = { nome: req.body.nome, email: req.body.email };
+    const novoUsuario = {
+      nome: req.body.nome,
+      email: req.body.email,
+      books: [],
+    };
 
     // validacao do body
     if (!novoUsuario.nome || !novoUsuario.email) {
@@ -129,9 +133,49 @@ const deletarUsuario = async (req, res) => {
   }
 };
 
+const criarLivroUsuario = async (req, res) => {
+  try {
+    const emailUsuario = req.params.email; // lê email dos params da URL
+    const novoLivro = {
+      titulo: req.body.titulo,
+      autor: req.body.autor,
+    };
+
+    const conteudoArquivo = await lerConteudoArquivo(caminhoArquivoDb); // retorna conteudo COMO STRING
+    const conteudoConvertidoEmObjeto = JSON.parse(conteudoArquivo); // converte string em objeto
+
+    // buscar usuario com email fornecido
+    let usuarioIndex;
+    for (let i = 0; i < conteudoConvertidoEmObjeto.users.length; i += 1) {
+      if (conteudoConvertidoEmObjeto.users[i].email === emailUsuario) {
+        usuarioIndex = i;
+        break;
+      }
+    }
+    const usuario = conteudoConvertidoEmObjeto.users[usuarioIndex];
+
+    // adicionar um item no array books do usuario
+    usuario.books.push(novoLivro);
+
+    const conteudoConvertidoEmString = JSON.stringify(conteudoConvertidoEmObjeto);
+
+    await alterarConteudoArquivo(caminhoArquivoDb, conteudoConvertidoEmString);
+
+    // status 200 = SUCESSO
+    res.status(200).json({ message: `Livro do usuário ${emailUsuario} criado com sucesso` });
+  } catch (error) {
+    console.error('Deu erro ao listar usuarios', error);
+    // STATUS 500 = ERRO INTERNO NO SERVIDOR
+    res.status(500).json({ message: 'Erro ao listar usuários' });
+  }
+};
+
+// const alterarLivroUsuario = () => { };
+
 module.exports = {
   criarUsuario,
   listarUsuarios,
   alterarUsuario,
   deletarUsuario,
+  criarLivroUsuario,
 };

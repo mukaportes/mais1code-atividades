@@ -1,1 +1,14 @@
-{"users":[{"nome":"Murilo Portescheller","email":"mport.dev@gmail.com"}]}
+{
+  "users": [
+    {
+      "nome": "Murilo",
+      "email": "mport.dev@uol.com",
+      "books": [
+        {
+          "titulo": "Meu livro 1",
+          "autor": "Murilo Portescheller"
+        }
+      ]
+    }
+  ]
+}
