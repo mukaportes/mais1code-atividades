@@ -17,4 +17,7 @@ Entrega: 23/06
   - Dar acesso ao usuário @mukaportes para o seu repositório
   - Criar Pull Request enviando a branch development, com seu código, a branch master
 
+## Extra
 
+- A criação de um frontend é opcional porém super válida para exercitar o que foi aprendido nas aulas de Javascript
+- Na pasta exemplo da API também temos exemplos de como conectar uma API com um frontend que podem ajudar no desenvolvimento 
