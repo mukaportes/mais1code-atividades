@@ -45,7 +45,7 @@ app.post(
   (request, response) => criarLivroUsuario(request, response),
 );
 
-// inicia servidor na porta 8000
-app.listen(8000);
+// inicia servidor na porta 3000
+app.listen(3000);
 
-console.log('Api ouvindo na porta 8000');
+console.log('Api ouvindo na porta 3000');
