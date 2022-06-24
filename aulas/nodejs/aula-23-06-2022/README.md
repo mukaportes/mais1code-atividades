@@ -35,6 +35,10 @@ A partir do momento que adicionamos na API que os usuários tem também um campo
 
 Isso não ocorre em um banco não relacional. Ao tentar inserir um usuário com um novo campo, que não existe no SCHEMA da tabela, o banco irá retornar um erro dizendo que essa coluna "dataNasc" não existe. Isso se deve por te ruma estrutura fix e, assim, demandar que primeiro atualize o SCHEMA da tabela, e depois passar a criar os usuários com o novo campo.
 
+PERFORMANCE - noSQL geralmente tem performance MUITO superior ao SQL
+LINGUAGEM - SQL é comum para todos, muda-se apenas alguns termos e funções de banco para banco (ex: de MySQL para PostgreSQL)
+
+
 ## Exemplos - Casos de Uso
 
 1. Plataforma onde os usuários cadastram seus livros favoritos e dão notas para eles
@@ -80,8 +84,10 @@ CREATE TABLE livros (
   titulo VARCHAR(100) NOT NULL,
   autor VARCHAR(100) NOT NULL,
   nota INT NOT NULL,
-  PRIMARY KEY (livro_id)
-  usuario_id INT  REFERENCES usuarios(usuario_id) 
+  usuario_id INT,
+  PRIMARY KEY (livro_id),
+  CONSTRAINT fk_usuario_livro
+      FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) 
 ) ENGINE=INNODB;
 ```
 
