@@ -87,7 +87,7 @@ CREATE TABLE livros (
   usuario_id INT,
   PRIMARY KEY (livro_id),
   CONSTRAINT fk_usuario_livro
-      FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) 
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id) 
 ) ENGINE=INNODB;
 ```
 
