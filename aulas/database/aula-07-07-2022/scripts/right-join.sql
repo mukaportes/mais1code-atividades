@@ -4,7 +4,7 @@ SELECT
   l.*
 FROM
   usuarios u
-LEFT JOIN
+RIGHT JOIN
   livros l
 ON
   u.usuario_id = l.usuario_id;
